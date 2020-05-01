@@ -1,0 +1,60 @@
+---
+title: "Manuscript 1 Analysis"
+author: "Samuel Workman, Ph.D."
+date: "`r format(Sys.time(), '%A, %B %d, %Y, %X')`"
+output:
+  html_document:
+    css: css/nord_light.css
+    df_print: paged
+    fig_retina: 1
+fig_width: 6
+fig_height: 4.5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, include = TRUE)
+```
+
+## Gather Tools
+
+### Source Custom Functions
+
+```{r custom_functions, warning=FALSE}
+# custom function to clean the column names; clean_names replaces " " and "/" with "_"
+# nord_fira uses the nord color palette and fira sans font for figures
+options(scipen = 999) # gets rid of scientific notation
+source("r/clean_names.R")
+source("r/nord_fira.R")
+```
+
+<div class = "row">
+<div class = "col-md-6">
+### Load Necessary `r fontawesome::fa("r-project", fill = "steelblue")` Packages
+
+```{r libraries, include = TRUE, echo = TRUE, eval = TRUE, warning = FALSE, message = FALSE}
+# Preliminary Libraries
+# remember dplyr::select()
+library(tidyverse) # data wrangling & ggplot2
+library(ggExtra) # axes and labeling
+library(showtext) # use Google Fonts
+library(kableExtra) # table construction
+library(readxl) # using MS Excel spreadsheets
+library(openxlsx)
+```
+</div>
+
+<div class = "col-md-6">
+### Load Google Fonts for the Figures
+
+```{r fonts, include = TRUE, echo = TRUE, eval = TRUE}
+## Loading Google fonts (https://fonts.google.com/)
+font_add_google("Fira Sans", "firasans")
+font_add_google("Fira Mono", "firamono")
+showtext_auto() # allow ggplot2 to render the fonts automatically for pdfs
+```
+</div>
+</div>
+
+---
+
+## Scrape the CSV Files

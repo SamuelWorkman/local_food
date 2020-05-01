@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Fira+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*If using Bookerly*/
+@font-face {
+    font-family: 'Bookerly';
+         url('fonts/Bookerly.ttf') format('truetype'),/*may need to spell out*/
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+}
