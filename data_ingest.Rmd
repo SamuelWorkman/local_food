@@ -31,7 +31,7 @@ source("r/nord_fira.R")
 <div class = "col-md-6">
 ### Load Necessary `r fontawesome::fa("r-project", fill = "steelblue")` Packages
 
-```{r libraries, include = TRUE, echo = TRUE, eval = TRUE, warning = FALSE, message = FALSE}
+```{r libraries, warning = FALSE, message = FALSE}
 # Preliminary Libraries
 # remember dplyr::select()
 library(tidyverse) # data wrangling & ggplot2
@@ -40,13 +40,15 @@ library(showtext) # use Google Fonts
 library(kableExtra) # table construction
 library(readxl) # using MS Excel spreadsheets
 library(openxlsx)
+library(rvest)
+library(stringr)
 ```
 </div>
 
 <div class = "col-md-6">
 ### Load Google Fonts for the Figures
 
-```{r fonts, include = TRUE, echo = TRUE, eval = TRUE}
+```{r fonts}
 ## Loading Google fonts (https://fonts.google.com/)
 font_add_google("Fira Sans", "firasans")
 font_add_google("Fira Mono", "firamono")
